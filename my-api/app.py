@@ -4,14 +4,14 @@ import mysql.connector
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'MyNotes'
+app.secret_key = 'your_key_here'
 CORS(app, supports_credentials=True)
 
 def get_db_connection():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="SQLfcalista09*"
+        password="your_password_here"
     )
     
     cursor = conn.cursor()
@@ -22,7 +22,7 @@ def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
         user="root",
-        password="SQLfcalista09*",
+        password="your_password_here",
         database="my_notes"
     )
 
